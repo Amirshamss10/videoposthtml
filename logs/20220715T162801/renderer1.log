@@ -1,0 +1,2 @@
+[2022-07-15 16:28:04.111] [renderer1] [warning] [zobo.php-intellisense]: Cannot register 'php.memoryLimit'. This property is already registered.
+[2022-07-15 16:28:04.112] [renderer1] [warning] [zobo.php-intellisense]: Cannot register 'php.executablePath'. This property is already registered.

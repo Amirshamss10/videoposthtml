@@ -1,0 +1,12 @@
+[2022-07-15 16:28:05.210] [sharedprocess] [info] Deleted from disk felixfbecker.php-pack /root/.vscode/extensions/felixfbecker.php-pack-1.0.2
+[2022-07-15 16:28:05.617] [sharedprocess] [info] Deleted from disk firefox-devtools.vscode-firefox-debug /root/.vscode/extensions/firefox-devtools.vscode-firefox-debug-2.9.1
+[2022-07-15 16:28:05.693] [sharedprocess] [info] Starting worker process with pid 17490 (type: fileWatcher, window: 1).
+[2022-07-15 16:28:06.902] [sharedprocess] [info] Deleted from disk felixfbecker.php-debug /root/.vscode/extensions/felixfbecker.php-debug-1.14.5
+[2022-07-15 16:28:07.052] [sharedprocess] [info] Deleted from disk bmewburn.vscode-intelephense-client /root/.vscode/extensions/bmewburn.vscode-intelephense-client-1.5.4
+[2022-07-15 16:28:08.922] [sharedprocess] [info] Getting Manifest... formulahendry.code-runner
+[2022-07-15 16:28:10.190] [sharedprocess] [info] Installing extension: formulahendry.code-runner
+[2022-07-15 16:28:12.524] [sharedprocess] [info] Downloaded extension: formulahendry.code-runner /opt/lampp/htdocs/blog/blog/CachedExtensionVSIXs/formulahendry.code-runner-0.11.8
+[2022-07-15 16:28:12.792] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.e9bbf9ef-2f9a-4c9b-8ff7-e2f3241176cd: formulahendry.code-runner
+[2022-07-15 16:28:12.843] [sharedprocess] [info] Renamed to /root/.vscode/extensions/formulahendry.code-runner-0.11.8
+[2022-07-15 16:28:12.848] [sharedprocess] [info] Extracting completed. formulahendry.code-runner
+[2022-07-15 16:28:12.901] [sharedprocess] [info] Extension installed successfully: formulahendry.code-runner

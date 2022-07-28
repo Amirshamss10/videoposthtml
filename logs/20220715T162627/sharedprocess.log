@@ -1,0 +1,38 @@
+[2022-07-15 16:26:35.269] [sharedprocess] [info] Starting worker process with pid 17269 (type: fileWatcher, window: 1).
+[2022-07-15 16:26:38.780] [sharedprocess] [info] Getting Manifest... bmewburn.vscode-intelephense-client
+[2022-07-15 16:26:38.782] [sharedprocess] [info] Getting Manifest... xdebug.php-debug
+[2022-07-15 16:26:38.783] [sharedprocess] [info] Getting Manifest... xdebug.php-pack
+[2022-07-15 16:26:38.784] [sharedprocess] [info] Getting Manifest... firefox-devtools.vscode-firefox-debug
+[2022-07-15 16:26:38.786] [sharedprocess] [info] Getting Manifest... formulahendry.code-runner
+[2022-07-15 16:26:40.166] [sharedprocess] [info] Installing extension: xdebug.php-debug
+[2022-07-15 16:26:40.168] [sharedprocess] [info] Installing extension: xdebug.php-pack
+[2022-07-15 16:26:40.261] [sharedprocess] [info] Installing extension: bmewburn.vscode-intelephense-client
+[2022-07-15 16:26:40.467] [sharedprocess] [info] Installing extension: formulahendry.code-runner
+[2022-07-15 16:26:40.484] [sharedprocess] [info] Installing extension: firefox-devtools.vscode-firefox-debug
+[2022-07-15 16:26:40.670] [sharedprocess] [info] Getting Manifest... zobo.php-intellisense
+[2022-07-15 16:26:41.501] [sharedprocess] [info] Installing extension: zobo.php-intellisense
+[2022-07-15 16:26:43.610] [sharedprocess] [info] Downloaded extension: firefox-devtools.vscode-firefox-debug /opt/lampp/htdocs/blog/blog/CachedExtensionVSIXs/firefox-devtools.vscode-firefox-debug-2.9.7
+[2022-07-15 16:26:43.712] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.f7d52c3f-9d11-47fd-8a3d-22f0b8a94522: firefox-devtools.vscode-firefox-debug
+[2022-07-15 16:26:43.757] [sharedprocess] [info] Renamed to /root/.vscode/extensions/firefox-devtools.vscode-firefox-debug-2.9.7
+[2022-07-15 16:26:43.762] [sharedprocess] [info] Extracting completed. firefox-devtools.vscode-firefox-debug
+[2022-07-15 16:26:43.813] [sharedprocess] [info] Extension installed successfully: firefox-devtools.vscode-firefox-debug
+[2022-07-15 16:26:44.988] [sharedprocess] [info] Downloaded extension: xdebug.php-debug /opt/lampp/htdocs/blog/blog/CachedExtensionVSIXs/xdebug.php-debug-1.27.0
+[2022-07-15 16:26:45.825] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.fe6ec751-4a48-42f2-8c63-77b42065a48f: xdebug.php-debug
+[2022-07-15 16:26:45.880] [sharedprocess] [info] Renamed to /root/.vscode/extensions/xdebug.php-debug-1.27.0
+[2022-07-15 16:26:45.886] [sharedprocess] [info] Extracting completed. xdebug.php-debug
+[2022-07-15 16:26:45.938] [sharedprocess] [info] Extension installed successfully: xdebug.php-debug
+[2022-07-15 16:26:49.473] [sharedprocess] [info] Downloaded extension: bmewburn.vscode-intelephense-client /opt/lampp/htdocs/blog/blog/CachedExtensionVSIXs/bmewburn.vscode-intelephense-client-1.8.2
+[2022-07-15 16:26:49.512] [sharedprocess] [info] Downloaded extension: zobo.php-intellisense /opt/lampp/htdocs/blog/blog/CachedExtensionVSIXs/zobo.php-intellisense-1.0.11
+[2022-07-15 16:26:50.517] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.9e62b26a-4034-4d42-b444-04cffb203691: bmewburn.vscode-intelephense-client
+[2022-07-15 16:26:51.164] [sharedprocess] [info] Renamed to /root/.vscode/extensions/bmewburn.vscode-intelephense-client-1.8.2
+[2022-07-15 16:26:51.168] [sharedprocess] [info] Extracting completed. bmewburn.vscode-intelephense-client
+[2022-07-15 16:26:51.453] [sharedprocess] [info] Extension installed successfully: bmewburn.vscode-intelephense-client
+[2022-07-15 16:26:53.640] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.b3db8605-8dd3-4966-934b-1f3c63f86f1f: zobo.php-intellisense
+[2022-07-15 16:26:53.749] [sharedprocess] [info] Renamed to /root/.vscode/extensions/zobo.php-intellisense-1.0.11
+[2022-07-15 16:26:53.752] [sharedprocess] [info] Extracting completed. zobo.php-intellisense
+[2022-07-15 16:26:55.389] [sharedprocess] [info] Downloaded extension: xdebug.php-pack /opt/lampp/htdocs/blog/blog/CachedExtensionVSIXs/xdebug.php-pack-1.0.3
+[2022-07-15 16:26:55.403] [sharedprocess] [info] Extracted extension to /root/.vscode/extensions/.52d79f84-a180-46a8-b88d-c09739f3dbc6: xdebug.php-pack
+[2022-07-15 16:26:55.455] [sharedprocess] [info] Renamed to /root/.vscode/extensions/xdebug.php-pack-1.0.3
+[2022-07-15 16:26:55.458] [sharedprocess] [info] Extracting completed. xdebug.php-pack
+[2022-07-15 16:26:55.524] [sharedprocess] [info] Extension installed successfully: zobo.php-intellisense
+[2022-07-15 16:26:55.525] [sharedprocess] [info] Extension installed successfully: xdebug.php-pack

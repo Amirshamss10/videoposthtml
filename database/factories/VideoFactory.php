@@ -15,14 +15,14 @@ class VideoFactory extends Factory
      * @return array<string, mixed>
      */
     public function definition()
-    {
-        $persianFaker =  \Faker\Factory::create("fa_IR");
+    {   
+        $persianFaker = \Faker\Factory::create("fa_IR");
         return [
             "name"=> $persianFaker->name(), 
-            "url"=> $this->faker->imageurl(640,680,"animals",true), 
-            "lenght"=> $this->faker->randomnumber(),
-            // "slug"=> $this->faker->slug(),
-            "description"=> $persianFaker->realText()
+            "url"=> "https://www.aparat.com/v/bPWo8", 
+            "lenght"=> rand(2,60),
+            "description"=> $this->faker->realText(), 
+            "thumbnail" => "https://loremflickr.com/320/240?random=". rand(1,99)
         ];
     }
 }

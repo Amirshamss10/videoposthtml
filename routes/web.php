@@ -12,4 +12,8 @@
     |
     */
     Route::get("/", [IndexController::class, "index"]);
+
+    Route::get("/upload", function() {
+        return view("videos.create");
+    });
 ?>

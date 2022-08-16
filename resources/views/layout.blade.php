@@ -41,7 +41,7 @@
                     	<i class="fa fa-close"></i>
                     </a>
                     <div id="logo">
-                        <a href="01-home.html"><img src="img/logo.png" alt=""></a>
+                        <a href="01-home.html"><img src="../img/logo.png" alt=""></a>
                     </div>
                 </div><!-- // col-md-2 -->
                 <div class="col-lg-3 col-md-3 col-sm-6 hidden-xs hidden-sm">
@@ -68,21 +68,21 @@
                               <ul class="dropdown-menu dropdown-menu-friend-requests ">
                                 <li>
                                 	<div class="friend-requests-info">
-                                        <div class="thumb"><a href="#"><img src="demo_img/z1.jpg" alt=""></a></div>
+                                        <div class="thumb"><a href="#"><img src="../demo_img/z1.jpg" alt=""></a></div>
                                         <a href="#" class="name">تینار </a>
                                         <span>ریحانه اسکندری    : اکنون شما را دنبال می کند</span>
                                     </div>
                                 </li>
                                 <li>
                                 	<div class="friend-requests-info">
-                                        <div class="thumb"><a href="#"><img src="demo_img/z2.jpg" alt=""></a></div>
+                                        <div class="thumb"><a href="#"><img src="../demo_img/z2.jpg" alt=""></a></div>
                                         <a href="#" class="name">داود طاهری </a>
                                         <span>داود طاهری : اکنون شما را دنبال می کند</span>
                                     </div>
                                 </li>
                                 <li>
                                 	<div class="friend-requests-info">
-                                        <div class="thumb"><a href="#"><img src="demo_img/z3.jpg" alt=""></a></div>
+                                        <div class="thumb"><a href="#"><img src="../demo_img/z3.jpg" alt=""></a></div>
                                         <a href="#" class="name">داود طاهری </a>
                                         <span>داود طاهری : اکنون شما را دنبال می کند</span>
                                     </div>
@@ -170,7 +170,7 @@
                 <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs hidden-sm">
 					  <div class="dropdown">
                         <a data-toggle="dropdown" href="#" class="user-area">
-                            <div class="thumb"><img src="demo_img/user-1.png" alt=""></div>
+                            <div class="thumb"><img src="../demo_img/user-1.png" alt=""></div>
                             <h2>تینار</h2>
                             <h3>25 اشتراک</h3>
                             <i class="fa fa-angle-down"></i>

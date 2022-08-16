@@ -246,9 +246,8 @@
                 <div class="clear"></div>
             </div><!-- // left-sidebar -->
       </div><!-- // col-md-2 -->
-
-        <div id="all-output" class="col-md-10">
-        {{ $content ?? null}}
+      <div id="all-output" class="col-md-10">
+        {{ $content ?? " "}}
       </div>                                                                                                                                                                                                                                                                                                                                               
 
 

@@ -8,9 +8,8 @@ use App\Models\Video;
 class IndexController extends Controller
 {
     public function index() {
-        $videos = video::inRandomOrder()->limit(4)->get();
+        //  $videos = video::inRandomOrder()->limit(4)->get();
         $mostPopularVideo =  video::inRandomOrder()->limit(7)->get();
-        $mostPopularVideo = Video::all()->random(6); 
-        return view("index", compact("videos", "mostPopularVideo")); 
+        return view("index", compact( "mostPopularVideo")); 
     }
 }

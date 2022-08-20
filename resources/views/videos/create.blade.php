@@ -11,19 +11,19 @@
                     <div class="row">
                         <div class="col-md-6">
                             <label>@lang("videos.name")</label>
-                            <input name="name" type="text" class="form-control" placeholder="@lang('videos.name')">
+                            <input name="name" type="text" class="form-control" value="{{old('name')}}" placeholder="@lang('videos.name')">
                         </div>
                         <div class="col-md-6">
-                            <label>آدرس ویدیو</label>
-                            <input name="url" type="text"  class="form-control" placeholder="آدرس ویدیو">
+                            <label>@lang("videos.url")</label>
+                            <input name="url" type="text"  class="form-control" value="{{old('url')}}" placeholder="@lang('videos.url')">
                         </div>
                         <div class="col-md-6">
-                            <label>مدت زمان</label>
-                            <input name="lenght" type="text"  class="form-control" placeholder="مدت زمان">
+                            <label>@lang("videos.lenght")</label>
+                            <input name="lenght" type="text"  class="form-control" value="{{ old('lenght') }}" placeholder="@lang('videos.lenght')">
                         </div>
                         <div class="col-md-6">
-                            <label>تصویر بند‌انگشتی</label>
-                            <input name="thumbnail" type="text" class="form-control" placeholder="تصویر بند انگشتی">
+                            <label>@lang("videos.thumbnail")</label>
+                            <input name="thumbnail" type="text" class="form-control" value="{{old('thumbnail')}}" placeholder="@lang('videos.thumbnail')">
                         </div>
                      
                         <div class="col-md-2">

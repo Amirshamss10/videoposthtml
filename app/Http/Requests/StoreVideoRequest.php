@@ -23,15 +23,14 @@ class StoreVideoRequest extends FormRequest
      *
      * @return array<string, mixed>
      */
-    public function rules(request $request)
+    public function rules()
     {
         return [
-            $request->validate([
                 "name"=> ["required"],
-                "url"=> ["required","unique:videos", "alpha_dash"], 
+                "url"=> ["required","unique:videos,url", "alpha_dash"], 
                 "lenght"=> ["required", "integer"],
-                "thumbnail"=> ["required"]
-            ])
+                "thumbnail"=> ["required"],
+                "category_id" => ["required", "exists:categories,id"]
         ];
     }
     protected function prepareForValidation() {

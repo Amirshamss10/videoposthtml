@@ -14,12 +14,6 @@ class VideoSeeder extends Seeder
      */
     public function run()
     {
-        // Video::factory()->create(array(
-        //     "name"=>"admin_admin", 
-        //     "url"=>"www.url.com/admin_panel", 
-        //     "lenght"=> 16, 
-        //     "description"=> "this is description" 
-        // )); 
         Video::factory()->count(50)->create();       
     }
 }

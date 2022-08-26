@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Hekmatinasser\Verta\Verta;
-
+use App\Models\Category;
 class Video extends Model
 {
     use HasFactory;
-    protected $guarded = null;
+    protected $fillable = ["name", "url", "lenght", "thumbnail", "category_id"];
     
     public function  getRouteKeyName() {
         return "url";
@@ -21,7 +21,15 @@ class Video extends Model
         $object = new Verta($value);
         return($object->formatDifference());
     }
-    public function RelatedVideos(int $count = 6) {
-     return Video::all()->random($count);
+    public function getCategoryNameAttribute() {
+        return $this->category->name; 
+    }
+    public function category() {
+        return $this->belongsTo(Category::class); 
+    }
+    public function RelatedVideos(int $count) {
+        return $this->category->getRandomVideos($count)->except($this->id);
     }
 }
+
+?>

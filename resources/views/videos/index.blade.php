@@ -1,15 +1,9 @@
 @extends("layout")
 @section("content") 
 
-@if(session("alert"))
-    <div class="alert alert-success">
-        {{session("alert")}}
-    </div>
-@endif
-<x-laytest-videos></x-laytest>
-                <h1 class="new-video-title"><i class="fa fa-bolt"></i>پربازدید ترین ویدیو</h1>
+                <h1 class="new-video-title"><i class="fa fa-bolt"></i>تست</h1>
                <div class="row">
-                @foreach($mostPopularVideo as $mostPopularVideo)
+                @foreach($videos as $mostPopularVideo)
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="video-item">
                         <div class="thumb">
@@ -29,11 +23,8 @@
                     </div>
                 </div>
                 @endforeach
-        </div>  
-            <!-- Loading More Videos -->
-            <div id="loading-more">
-            	<i class="fa fa-refresh faa-spin animated"></i> <span>در حال بارگیری بیشتر</span>
-            </div>
-            <!-- // Loading More Videos -->
       </div> 
+      <div class="text-center">
+          {{  $videos->links() }}
+      </div>
       @endsection

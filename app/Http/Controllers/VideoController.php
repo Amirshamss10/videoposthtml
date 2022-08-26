@@ -2,41 +2,47 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Video;
+use App\Models\Category;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreVideoRequest;
+use App\Http\Requests\UpdateVideoRequest;
+
+date_default_timezone_set("Asia/Tehran");
 
 class VideoController extends Controller
 {
-    public function index() {
+    public function index() { 
         $videos = video::all(); 
         return($videos); 
     }
     public function create() {
-        return view("videos.create");
+        $categories = Category::all(); 
+        return view("videos.create", compact("categories"));
     }
     public function store(StoreVideoRequest $request) {
-        date_default_timezone_set("Asia/Tehran");
         $videos = video::create([
             "name"=> $request->name, 
             "url"=> $request->url,
             "lenght"=> $request->lenght,
-            "thumbnail"=> "https://loremflickr.com/320/240?random=". rand(1,1000)
+            "thumbnail"=> "https://loremflickr.com/320/240?random=". rand(1,1000), 
+            "category_id" => $request->category_id  
         ]);
-        return redirect()->route("index")->with("alert", __("message.success"));
+        return redirect()->route("videos.show", $request->url)->with("alert", __("message.success"));
     }
     public function show(request $request, Video $video) {
         return view("videos.show", compact("video"));
     }  
     public function edit(Video $video) {
-        return view("videos.edit", compact("video"));
+        $categories = Category::all(); 
+        return view("videos.edit", compact("video", "categories"));
     }
-    public function update(request $request, Video $video) {
+    public function update(UpdateVideoRequest $request, Video $video) {
         $video->update([
             "name" => $request->name, 
-             "url"  => $request->url, 
+            "url"  => $request->url, 
             "lenght" => $request->lenght, 
-             "thumbnail" => $request->thumbnail     
+            "thumbnail" => $request->thumbnail     
         ]);
         return redirect()->route("videos.update",$video->url)->with("alert", __("message.video_edited"));
     }

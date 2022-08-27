@@ -116,7 +116,7 @@
 
                 <!-- Related Posts-->
                 <div class="col-md-4">
-                <x-related-video></x-related-video>
+                <x-related-video video="{{ $video->id }}"></x-related-video>
                 </div><!-- // col-md-4 -->
                 <!-- // Related Posts -->
             </div><!-- // row -->

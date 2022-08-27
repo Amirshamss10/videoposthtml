@@ -1,8 +1,10 @@
 <?php
     use Illuminate\Support\Facades\Route;
+    use Illuminate\Support\Facades\Auth;
     use App\Http\Controllers\IndexController; 
     use App\Http\Controllers\VideoController;
     use App\Http\Controllers\CategoryVideoController;
+    use App\Models\User;
     /*
     |--------------------------------------------------------------------------
     | Web Routes
@@ -13,6 +15,7 @@
     | contains the "web" middleware group. Now create something great!
     |
     */
+
     Route::get("/", [IndexController::class, "index"])->name("index");
  
     Route::get("/videos/create", [VideoController::class, "create"])->name("videos.create"); 

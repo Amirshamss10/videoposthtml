@@ -1,28 +1,32 @@
 {
-  "private": true,
-  "scripts": {
-    "dev": "npm run development",
-    "development": "mix",
-    "watch": "mix watch",
-    "watch-poll": "mix watch -- --watch-options-poll=1000",
-    "hot": "mix watch --hot",
-    "prod": "npm run production",
-    "production": "mix --production",
-    "lint:js": "eslint --ext .js,.vue ./"
-  },
-  "devDependencies": {
-    "axios": "^0.25",
-    "css-loader": "^6.7.1",
-    "laravel-mix": "^6.0.49",
-    "lodash": "^4.17.19",
-    "mini-css-extract-plugin": "^2.6.1",
-    "postcss": "^8.1.14",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.9.3"
-  },
-  "dependencies": {
-    "jquery": "^3.6.0"
-  }
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production",
+        "lint:js": "eslint --ext .js,.vue ./"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.2",
+        "alpinejs": "^3.4.2",
+        "autoprefixer": "^10.4.2",
+        "axios": "^0.25",
+        "css-loader": "^6.7.1",
+        "laravel-mix": "^6.0.49",
+        "lodash": "^4.17.19",
+        "mini-css-extract-plugin": "^2.6.1",
+        "postcss": "^8.4.6",
+        "style-loader": "^3.3.1",
+        "tailwindcss": "^3.1.0",
+        "webpack": "^5.74.0",
+        "webpack-cli": "^4.10.0",
+        "webpack-dev-server": "^4.9.3"
+    },
+    "dependencies": {
+        "jquery": "^3.6.0"
+    }
 }

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Hekmatinasser\Verta\Verta;
+use Hekmatinasser\Jalali\Jalali;
 use App\Models\Category;
 class Video extends Model
 {
@@ -17,8 +17,8 @@ class Video extends Model
     public function getLenghtInHumnAttribute() {
         return date("i:s", $this->lenght);
     }
-    public function getCreatedAtAttribute($value) {
-        $object = new Verta($value);
+     public function getCreatedAtAttribute($value) {
+        $object = new Jalali($value);
         return($object->formatDifference());
     }
     public function getCategoryNameAttribute() {

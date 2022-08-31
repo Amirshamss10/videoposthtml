@@ -30,10 +30,5 @@
                 </div>
                 @endforeach
         </div>  
-            <!-- Loading More Videos -->
-            <div id="loading-more">
-            	<i class="fa fa-refresh faa-spin animated"></i> <span>در حال بارگیری بیشتر</span>
-            </div>
-            <!-- // Loading More Videos -->
-      </div> 
+
       @endsection

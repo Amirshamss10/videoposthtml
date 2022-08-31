@@ -26,7 +26,6 @@
                             <input name="thumbnail" type="text" class="form-control" value="{{old('thumbnail')}}" placeholder="@lang('videos.thumbnail')">
                         </div>
                      
-
                         <div class="col-md-6">
                             <label>@lang("videos.CategoryName")</label>
                             <select class = "form-control" name="category_id" id="category">

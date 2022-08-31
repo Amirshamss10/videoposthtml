@@ -30,6 +30,7 @@
 
     <body>
       <!--======= header =======-->
+      
       <header>
         <div class="container-full">
         	<div class="row">
@@ -41,7 +42,7 @@
                     	<i class="fa fa-close"></i>
                     </a>
                     <div id="logo">
-                        <a href="01-home.html"><img src="../img/logo.png" alt=""></a>
+                        <a href="{{ route('index') }}"><img src="../img/logo.png" alt=""></a>
                     </div>
                 </div><!-- // col-md-2 -->
                 <div class="col-lg-3 col-md-3 col-sm-6 hidden-xs hidden-sm">
@@ -52,6 +53,7 @@
                         </form>
                     </div>
                 </div><!-- // col-md-3 -->
+                @auth 
                 <div class="col-lg-3 col-md-3 col-sm-5 hidden-xs hidden-sm">
                     <ul class="top-menu">
                         <li><a href="01-home.html">خانه</a></li>
@@ -171,7 +173,7 @@
 					  <div class="dropdown">
                         <a data-toggle="dropdown" href="#" class="user-area">
                             <div class="thumb"><img src="../demo_img/user-1.png" alt=""></div>
-                            <h2>تینار</h2>
+                            <h2 dir="rtl">{{ Auth::user()->name}}</h2>
                             <h3>25 اشتراک</h3>
                             <i class="fa fa-angle-down"></i>
                         </a>
@@ -179,14 +181,20 @@
                            <li><a href="#"><i class="fa fa-edit color-1"></i>ویرایش پروفایل</a></li>
                            <li><a href="#"><i class="fa fa-video-camera color-2"></i>اضافه کردن فیلم</a></li>
                            <li><a href="#"><i class="fa fa-star color-3"></i>برگزیده</a></li>
-                           <li><a href="#"><i class="fa fa-sign-out color-4"></i>خروج</a></li>
+                           <li><a href="{{ route('logout') }}"><i class="fa fa-sign-out color-4"></i>خروج</a></li>
                         </ul>
     				</div>
                 </div>
             </div><!-- // row -->
+            @endauth
+            @guest 
+            <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs hidden-sm">
+                <a href=" {{ route('login.create') }}" class="btn btn-danger">ورود</a>
+                <a href=" {{ route('register.create') }}" class="btn btn-danger">ثبت نام</a> 
+            </div>
+            @endguest
         </div><!-- // container-full -->
       </header><!-- // header -->
-
       <x-header-menu/>
 	  <div class="site-output">
       	<div class="col-md-2 no-padding-left hidden-sm hidden-xs">
@@ -208,19 +216,17 @@
                 	<li><a href="#"><i class="fa fa-question-circle"></i>راهنما</a></li>
                 	<li><a href="#"><i class="fa fa-send-o"></i>ارسال بازخورد</a></li>
                 </ul>
-                </div><!-- // sidebar-stick -->
-                <div class="clear"></div>
-            </div><!-- // left-sidebar -->
+            </div><!-- // sidebar-stick -->
+            <div class="clear"></div>
+        </div><!-- // left-sidebar -->
       </div><!-- // col-md-2 -->
 
         <div id="all-output" class="col-md-10">
-         @yield("content");
+         @yield("content")
         
       </div>                                                                                                                                                                                                                                                                                                                                               
 
 
 <script src="{{asset('js/main.js')}}"></script>
-
-
 	</body>
 </html>

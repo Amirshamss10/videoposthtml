@@ -29,7 +29,7 @@
                             <label>@lang("videos.CategoryName")</label>
                             <select class = "form-control" name="category_id" id="category">
                                 @foreach($categories AS $category) 
-                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    <option value="{{ $category->id }}>{{ $category->name }}</option>
                                 @endforeach
                             </select>
                         </div>

@@ -24,12 +24,17 @@ class Video extends Model
     public function getCategoryNameAttribute() {
         return $this->category->name; 
     }
+    public function getOwnerNameAttribute() {
+        return $this->user?->name ?? "ناشناس"; 
+    }
     public function category() {
         return $this->belongsTo(Category::class); 
+    }
+    public function user() {
+        return $this->belongsTo(User::class); 
     }
     public function RelatedVideos(int $count) {
         return $this->category->getRandomVideos($count)->except($this->id);
     }
 }
-
 ?>

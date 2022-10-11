@@ -29,15 +29,6 @@
 					<label class="control-label">تأیید رمز عبور</label>
 					<input name="password_confirmation" class="form-control" placeholder="" type="password">
 				</div>
-
-				<div class="form-group label-floating is-select">
-					<label class="control-label">جنسیت</label>
-					<select class="selectpicker form-control">
-						<option value="MA">مرد</option>
-						<option value="FE">زن</option>
-                        <option value="x">مایل نیستم</option>
-					</select>
-				</div>
                 
 				<div class="remember">
 					<div class="checkbox">

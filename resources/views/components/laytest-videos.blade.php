@@ -13,7 +13,7 @@
                                 <a href="{{ route('videos.edit',$video->url) }}">
                                     <i class="fa fa-pencil" aria-hidden="true"></i>
                                 </a>
-                                <a class="channel-name" href="#">تینار<span>
+                                <a class="channel-name" href="#">{{ $video->owner_name }}<span>
                                     <i class="fa fa-check-circle"></i></span></a>
                                     <span class="views"><i class="fa fa-eye"></i>{{number_format(rand(10,50000));}} بازدید</span>
                                     <span class="date"><i class="fa fa-clock-o"></i>{{$video->created_at}}</span>

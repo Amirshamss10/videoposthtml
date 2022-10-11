@@ -1,5 +1,5 @@
 @extends("layout")
-@section("content") 
+@section("content")
                 <h1 class="new-video-title"><i class="fa fa-bolt"></i>تست</h1>
                <div class="row">
                 @foreach($videos as $mostPopularVideo)
@@ -12,7 +12,7 @@
                         </div>
                         <div class="video-info">
                             <a href="{{ route('videos.show',$mostPopularVideo->url) }}" class="title">{{$mostPopularVideo->name}}</a>
-                            <a class="channel-name" href="#">تینار<span>
+                            <a class="channel-name" href="#">{{$mostPopularVideo->Owner_name }}<span>
                             <i class="fa fa-check-circle"></i></span></a>
                             <span class="views"><i class="fa fa-eye"></i>{{number_format(rand(50000,60000))}} بازدید</span>
                             <span class="date"><i class="fa fa-clock-o"></i>{{$mostPopularVideo->created_at}}</span>
@@ -23,7 +23,7 @@
                 </div>
                 @endforeach
       </div> 
-      <div class="text-center">
+      <div class="text-center" dir="ltr">
           {{  $videos->links() }}
       </div>
       @endsection

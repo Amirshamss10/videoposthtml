@@ -7,6 +7,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreVideoRequest;
 use App\Http\Requests\UpdateVideoRequest;
+use Illuminate\Support\Facades\Auth;
 
 date_default_timezone_set("Asia/Tehran");
 
@@ -21,16 +22,16 @@ class VideoController extends Controller
         return view("videos.create", compact("categories"));
     }
     public function store(StoreVideoRequest $request) {
-        $videos = video::create([
+        $request->user()->videos()->create([
             "name"=> $request->name, 
             "url"=> $request->url,
             "lenght"=> $request->lenght,
             "thumbnail"=> "https://loremflickr.com/320/240?random=". rand(1,1000), 
-            "category_id" => $request->category_id  
+            "category_id" => $request->category_id
         ]);
         return redirect()->route("videos.show", $request->url)->with("alert", __("message.success"));
     }
-    public function show(request $request, Video $video) {
+    public function show(Video $video) {
         return view("videos.show", compact("video"));
     }  
     public function edit(Video $video) {

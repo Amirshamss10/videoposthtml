@@ -7,7 +7,7 @@
             <a href="{{ route('videos.show',$item->id) }}"><img src="{{ $item->thumbnail }}" alt=""></a>
         </div>
         <a href="{{ route('videos.show', $item->url) }}" class="title">{{ $item->name }} </a>
-        <a class="channel-name" href="#">تینار<span>
+        <a class="channel-name" href="#">{{ $item->owner_name }}<span>
         <i class="fa fa-check-circle"></i></span></a>
     </div>
     @endforeach

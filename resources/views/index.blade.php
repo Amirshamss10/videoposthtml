@@ -19,7 +19,7 @@
                         </div>
                         <div class="video-info">
                             <a href="{{ route('videos.show',$mostPopularVideo->url) }}" class="title">{{$mostPopularVideo->name}}</a>
-                            <a class="channel-name" href="#">تینار<span>
+                            <a class="channel-name" href="#">{{$mostPopularVideo->owner_name}}<span>
                             <i class="fa fa-check-circle"></i></span></a>
                             <span class="views"><i class="fa fa-eye"></i>{{number_format(rand(50000,60000))}} بازدید</span>
                             <span class="date"><i class="fa fa-clock-o"></i>{{$mostPopularVideo->created_at}}</span>

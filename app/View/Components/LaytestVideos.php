@@ -15,7 +15,8 @@ class LaytestVideos extends Component
      */
     public function __construct()
     {
-        $this->videos = video::inRandomOrder()->limit(4)->get();
+        // $this->videos = video::inRandomOrder()->limit(4)->get();
+        $this->videos = Video::with("user","category")->limit(7)->inRandomOrder()->get();
     }
 
     /**

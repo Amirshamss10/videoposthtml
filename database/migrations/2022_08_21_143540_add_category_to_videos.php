@@ -26,6 +26,8 @@ return new class extends Migration
     public function down()
     {
         Schema::table('videos', function (Blueprint $table) {
+            // remove firegin key
+            // drop column 
             $table->dropForeign('videos_category_id_foreign');
             $table->dropColumn("user_id");
         });

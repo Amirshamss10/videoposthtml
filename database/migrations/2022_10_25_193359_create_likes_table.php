@@ -13,11 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('likes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("video_id")->constrained("videos");   
-            $table->foreignId("user_id")->constrained("users");
-            $table->text("body");
+            $table->foreignId("user_id")->constrained("users"); 
+            // $table->string("likeable_type"); 
+            // $table->bigInteger("likeable_id"); 
+            $table->morphs("likeable");
+            $table->tinyInteger("vote");
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists('likes');
     }
 };

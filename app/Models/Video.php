@@ -3,12 +3,15 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Traits\Likeable;
 use Illuminate\Database\Eloquent\Model;
 use Hekmatinasser\Jalali\Jalali;
 use App\Models\Category;
+use App\Models\Comment; 
+
 class Video extends Model
 {
-    use HasFactory;
+    use HasFactory, Likeable;
     protected $fillable = ["name", "url", "lenght", "thumbnail", "category_id"];
     
     public function  getRouteKeyName() {
@@ -36,5 +39,8 @@ class Video extends Model
     public function RelatedVideos(int $count) {
         return $this->category->getRandomVideos($count)->except($this->id);
     }
+    public function comments() {
+        return $this->hasMany(comment::class)->orderBy("created_at", "desc");
+    }
 }
-?>
+?>  

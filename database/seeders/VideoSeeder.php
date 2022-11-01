@@ -14,6 +14,11 @@ class VideoSeeder extends Seeder
      */
     public function run()
     {
-        Video::factory()->count(50)->create();       
+        Video::factory()->hasComments(4)->hasLikes(10)->count(50)->create();      
     }
+    /*
+    has 
+    مربوط به مجیک متد های خود لاراول هستش
+    اسم فانکشن هم درواقع از ریلیشنی که داخل مدل تعریف کردیم میفهمه
+    */
 }

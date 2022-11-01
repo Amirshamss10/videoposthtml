@@ -14,7 +14,7 @@ date_default_timezone_set("Asia/Tehran");
 class VideoController extends Controller
 {
     public function index() { 
-        $videos = video::all(); 
+        $videos = video::all();
         return($videos); 
     }
     public function create() {
@@ -32,6 +32,7 @@ class VideoController extends Controller
         return redirect()->route("videos.show", $request->url)->with("alert", __("message.success"));
     }
     public function show(Video $video) {
+        $video->load("comments.user");
         return view("videos.show", compact("video"));
     }  
     public function edit(Video $video) {

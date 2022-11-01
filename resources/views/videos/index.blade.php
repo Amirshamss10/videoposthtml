@@ -8,7 +8,7 @@
                         <div class="thumb">
                         	<div class="hover-efect"></div>
                             <small class="time" style=color:green>{{$mostPopularVideo->lenghtInHumn}}</small>
-                            <a href="{{ route('videos.show',$mostPopularVideo->url) }}"><img src="{{$mostPopularVideo->thumbnail}}" alt=""></a>
+                            <a href="{{ route('videos.show',$mostPopularVideo->url) }}"><img sr c="{{$mostPopularVideo->thumbnail}}" alt=""></a>
                         </div>
                         <div class="video-info">
                             <a href="{{ route('videos.show',$mostPopularVideo->url) }}" class="title">{{$mostPopularVideo->name}}</a>

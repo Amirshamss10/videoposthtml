@@ -13,8 +13,8 @@ class RelatedVideo extends Component
      *
      * @return void
      */
-    public function __construct($video) {
-        $video = Video::query()->findOrFail($video);
+    public function __construct(Video $video) {
+        $videos = Video::query();
         $this->videos = $video->RelatedVideos(10);
     }
 

@@ -9,6 +9,7 @@ class Like extends Model
 {
     use HasFactory;
     protected $fillable = ["user_id", "vote"];
+
     
     public function likeable() {
         return $this->morphTo(); 

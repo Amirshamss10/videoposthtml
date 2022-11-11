@@ -9,7 +9,6 @@ use App\Http\Requests\StoreVideoRequest;
 use App\Http\Requests\UpdateVideoRequest;
 use Illuminate\Support\Facades\Auth;
 
-date_default_timezone_set("Asia/Tehran");
 
 class VideoController extends Controller
 {

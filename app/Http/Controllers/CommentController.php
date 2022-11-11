@@ -12,7 +12,7 @@ class CommentController extends Controller
     public function store(StoreCommentRequest $request, Video $video) {  
         $video->comments()->create([
             "user_id" => Auth()->id(), 
-            "body" => $request->comment, 
+            "body" => $request->body, 
             "create_at" => date("Y-m-d H:i:s"),
             "updated_at" => date("Y-m-d H:i:s") 
         ]);

@@ -2,6 +2,7 @@
 namespace App\Models\Traits ;
 
 use App\Models\Like;  
+use App\Models\User; 
 
 trait Likeable 
 {
@@ -9,14 +10,31 @@ trait Likeable
     {   
         return $this->morphMany(Like::class, "likeable"); 
     }
+
     public function getLikeCountAttribute() {
         return $this->likes()->where("vote","1")->count(); 
  
     }
-    public function getThisLikeCountAttribute() {
-        // return 10;
+
+    public function getdisLikeCountAttribute() {
         return $this->likes()->where("vote","0")->count(); 
     }
-}
 
+    public function likedBy(User $user) {
+        return $this->likes()->create([
+            "vote" => 1,
+            "user_id" => $user->id, 
+        ]);
+    }
+
+    public function dislikedBy(User $user) {
+        return $this->likes()->create([
+            "vote" => 0,
+            "user_id" => $user->id, 
+            // "create_at" => time(), 
+            // "updated_at" => time() 
+        ]);
+    }
+    
+}
 ?>

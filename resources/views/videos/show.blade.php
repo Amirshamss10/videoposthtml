@@ -17,15 +17,17 @@
                 <div>
                     <p>
                         {{ $video->description }}
+                        نام دسته بندی: {{$video->category->name}}
                     </p>
                 </div>
 
                 <div class="video-share">
                     <ul class="like">
-                        <li><a class="deslike" href="">{{ $video->dislikes_count }} <i
+                        <p>{{ $video->likeCount }}</p> 
+                        <li><a class="deslike" href="{{ route('dislikes.store', ['likeable_type' => 'video', 'likeable_id' => $video]) }}">{{ $video->dis_like_count  }}<i
                                     class="fa fa-thumbs-down"></i></a></li>
                         <li><a class="like"
-                                href="{{ route('likes.store', ['likeable_type' => 'video', 'likeable_id' => $video]) }}">{{ $video->likes_count }}
+                                href="{{ route('likes.store', ['likeable_type' => 'video', 'likeable_id' => $video]) }}">{{ $video->like_count}}
                                 <i class="fa fa-thumbs-up"></i></a></li>
                     </ul>
                     <ul class="social_link">
@@ -48,7 +50,7 @@
                 <!-- Chanels Item -->
                 <div class="chanel-item">
                     <div class="chanel-thumb">
-                        <a href="#"><img src="{{ $video->owner_avatar }}" alt=""></a>
+                        <a href="#"><img src="" alt=""></a>
                     </div>
                     <div class="chanel-info">
                         <a class="title" href="#">{{ $video->owner_name }}</a>
@@ -61,7 +63,7 @@
 
                 <!-- Comments -->
                 <div id="comments" class="post-comments">
-                    <h3 class="post-box-title"><span>{{ $video->comments->count() }}</span> نظرات</h3>
+                <h3 class="post-box-title"><span>{{ $video->comments->count() }}</span> نظرات</h3>
                     <ul class="comments-list">
                         @foreach ($video->comments as $comment)
                             <li>
@@ -70,11 +72,11 @@
                                         <a href="#"><img src="{{ $comment->user->gravatar }}" alt=""></a>
                                     </div>
                                     <a href="#" class="author-name">{{ $comment->user->name }}</a>
-                                    <time datetime="2017-03-24T18:18">{{ $comment->created_at_in_human }}</time>
+                                    <time datetime="2017-03-24T18:18">{{ $comment->createdAthuman }}</time>
                                     <a class='deslike mr-5' style="color: #aaaaaa"
-                                        href="">{{ $comment->dislikes_count }}<i class="fa fa-thumbs-down"></i></a>
+                                        href="{{ route('dislikes.store', ['likeable_type' => 'comment', 'likeable_id' =>$comment]) }}">{{ $comment->dis_like_count }}<i class="fa fa-thumbs-down"></i></a>
                                     <a class='like mr-5' style="color: #66c0c2"
-                                        href="{{ route('likes.store', ['likeable_type' => 'comment', 'likeable_id' => $comment]) }}">{{ $comment->likes_count }}<i
+                                        href="{{ route('likes.store', ['likeable_type' => 'comment', 'likeable_id' =>$comment]) }}">{{ $comment->like_count }}<i
                                             class="fa fa-thumbs-up"></i></a>
 
                                 </div>

@@ -8,7 +8,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use App\Models\Video;
 
-class VideoProcessed extends Notification
+class VideoProcessed extends Notification implements ShouldQueue
 {
     use Queueable;
     protected $video; 
@@ -17,7 +17,7 @@ class VideoProcessed extends Notification
      *
      * @return void
      */
-    public function __construct(Video $video = null)
+    public function __construct(Video $video)
     {
         $this->video = $video;
     }

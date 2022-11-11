@@ -8,6 +8,7 @@
     use App\Http\Controllers\CategoryVideoController;
     use App\Http\Controllers\CommentController; 
     use App\Http\Controllers\LikeController;
+    use App\Http\Controllers\DisLikeController; 
     use App\Mail\VerfyEmail;
     use App\Models\User;
     use App\Jobs\ProcessVideo; 
@@ -22,7 +23,9 @@
             Route::get("/videos/{video}/edit", [VideoController::class, "edit"])->name("videos.edit");
             Route::post("/videos/{video}", [VideoController::class,"update"])->name("videos.update");
             Route::post("/videos/{video}/comments",[CommentController::class, "store"])->name("comments.store");
-            Route::get("/ {likeable_type} / {likeable_id} /like", [LikeController::class, "store"])->name("likes.store");
+            Route::get("/{likeable_type}/{likeable_id}/like", [LikeController::class, "store"])->name("likes.store");
+            Route::get("/{likeable_type}/{likeable_id}/dislike", [disLikeController::class, "store"])->name("dislikes.store");
+
         });
         
         Route::get("/", [IndexController::class, "index"])->name("index");
@@ -35,6 +38,7 @@
             // VideoCreated::dispatch($video);
             event(new VideoCreated($video));
         });
+
         Route::get("/notify", function(){
             $user = Auth::user(); 
             $video = Video::first(); 

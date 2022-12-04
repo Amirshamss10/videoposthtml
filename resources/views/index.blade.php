@@ -6,6 +6,7 @@
         {{session("alert")}}
     </div>
 @endif
+
 <x-laytest-videos></x-laytest>
                 <h1 class="new-video-title"><i class="fa fa-bolt"></i>پربازدید ترین ویدیو</h1>
                <div class="row">
@@ -31,4 +32,4 @@
                 @endforeach
         </div>  
 
-      @endsection
+      @endsection   

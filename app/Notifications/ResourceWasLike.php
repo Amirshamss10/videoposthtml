@@ -6,20 +6,20 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
-use App\Models\Video;
 
-class VideoProcessed extends Notification implements ShouldQueue
+class ResourceWasLike extends Notification
 {
     use Queueable;
-    protected $video; 
+
+    private $likeable; 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct(string $video)
+    public function __construct( $likeable)
     {
-        $this->video = $video;
+        $this->likeable = $likeable;
     }
 
     /**
@@ -41,11 +41,7 @@ class VideoProcessed extends Notification implements ShouldQueue
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)
-                    ->line('سلام کاربر عزیز, از اعتماد شما سپاسگذاریم.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!')
-                    ->line($video);
+        return (new MailMessage)->view("emails.Resource-was-liked", ["resource_id"=> $this->likeable->id]);
     }
 
     /**
@@ -57,8 +53,7 @@ class VideoProcessed extends Notification implements ShouldQueue
     public function toArray($notifiable)
     {
         return [
-            "video_name" => $this->video->name,
-            "url" => $this->video->url
+            //
         ];
     }
 }

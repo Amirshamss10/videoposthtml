@@ -10,9 +10,9 @@ use App\Models\User;
 class CategoryVideoController extends Controller
 {
     
-    public function index(Category $category) { 
-        $videos = Video::with(["Category","user","category.videos"])->CursorPaginate();
+    public function index(Request $request, Category $category) { 
+        $videos = Video::with(["Category","user","category.videos"])->Filter($request->all())->sort($request->all())->simplePaginate();
         return view("videos.index", compact("videos"));
     }
-
+    
 }

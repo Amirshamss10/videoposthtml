@@ -9,10 +9,6 @@ class LikeController extends Controller
 {
     public function store(Request $request,string $likeable_type, $likeable) {
         $likeable->likedBy(Auth()->user());
-        /* return $likeable->likes()->create([
-            "user_id" => $user, 
-                "vote" => 1,
-        ]); */
         return back();
     }
 }

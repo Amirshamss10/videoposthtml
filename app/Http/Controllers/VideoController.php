@@ -8,8 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\StoreVideoRequest;
 use App\Http\Requests\UpdateVideoRequest;
 use Illuminate\Support\Facades\Auth;
-
-
+use Illuminate\Support\Facades\Storage;
 class VideoController extends Controller
 {
     public function index() { 
@@ -20,7 +19,12 @@ class VideoController extends Controller
         $categories = Category::all(); 
         return view("videos.create", compact("categories"));
     }
+    //StoreVideoRequest
     public function store(StoreVideoRequest $request) {
+        $path = storage::putFile("", $request->file);
+        $request->merge([
+            "url" => $path
+        ]);
         $request->user()->videos()->create([
             "name"=> $request->name, 
             "url"=> $request->url,
@@ -38,7 +42,13 @@ class VideoController extends Controller
         $categories = Category::all(); //show categories 
         return view("videos.edit", compact("video", "categories"));
     }
-    public function update(UpdateVideoRequest $request, Video $video) {
+    public function update(Request $request, Video $video) {
+        if($request->hasFile('file')) {
+            $path  = Storage::putFile("filme", $request->file); 
+            $request->merge([
+                "url" => $path
+            ]);
+        }
         $video->update([
             "name" => $request->name, 
             "url"  => $request->url, 

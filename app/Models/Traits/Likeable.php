@@ -21,20 +21,35 @@ trait Likeable
     }
 
     public function likedBy(User $user) {
-        return $this->likes()->create([
-            "vote" => 1,
-            "user_id" => $user->id, 
-        ]);
+        if(!$this->islikedBy($user)) {
+            return $this->likes()
+            ->create([
+                "user_id" => $user->id, 
+                "vote" => 1,
+            ]);
+        }
     }
 
     public function dislikedBy(User $user) {
-        return $this->likes()->create([
-            "vote" => 0,
-            "user_id" => $user->id, 
-            // "create_at" => time(), 
-            // "updated_at" => time() 
-        ]);
+        if(!$this->isDislikedBy($user)) {
+            return $this->likes()
+            ->create([
+                "user_id" => $user->id, 
+                "vote" => 0,
+            ]);
+        } 
     }
-    
+    public function islikedBy(User $user) {
+        return $this->likes()
+        ->where("vote", 1)
+        ->where("user_id", $user->id)
+        ->exists(); 
+    } 
+    public function isDislikedBy(User $user) {
+        return $this->likes()
+        ->where("vote", 0)
+        ->where("user_id", $user->id)
+        ->exists();
+    }   
 }
 ?>

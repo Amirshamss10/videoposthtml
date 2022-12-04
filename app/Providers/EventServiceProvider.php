@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Event;
 use App\Events\VideoCreated; 
 use App\Listeners\SendMail; 
 use App\Listeners\ProcessVideo;
+use App\Models\Like; 
+use App\Observers\LikeObserver;
+use App\Models\Video; 
+use App\Observers\VideoObserver;
+
 class EventServiceProvider extends ServiceProvider
 {
     /**
@@ -33,7 +38,8 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Like::observe(LikeObserver::class); 
+        Video::observe(VideoObserver::class);
     }
 
     /**
